@@ -1,0 +1,39 @@
+---
+import DefaultLayout from '../../layouts/DefaultLayout.astro'
+import GoapHero from '../../components/GoapHero.astro'
+import Feature from '../../components/Feature.astro'
+import ContentMedia from '../../components/ContentMedia.astro'
+import Counters from '../../components/Counters.astro'
+---
+
+<DefaultLayout title="Home">
+  <GoapHero />
+  <section class="my-32">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Features</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="mdi:fast-forward" title="Fast">
+          The project uses the Unity Job system to resolve the graph, this ensures very high frames!
+        </Feature>
+        <Feature icon="mdi:cog" title="Simple">
+          It has been designed to be as simple, yet flexible as possible to use!
+        </Feature>
+        <Feature icon="mdi:book-open-page-variant" title="Well Documented">
+          There is <a href="https://goap.crashkonijn.com/">extensive documentation</a> available online!
+        </Feature>
+        <Feature icon="mdi:open-source-initiative" title="Open Source">
+          See something that could be better? Change it!
+        </Feature>
+        <Feature icon="mdi:shield-bug-outline" title="Tested">
+          Don't worry about the GOAP not working, the most importand parts are unit tested!
+        </Feature>
+        <Feature icon="mdi:eye-outline" title="Visualizer">
+          A lot of time and effort went into creating the node visualizer. Never wonder again what the AI is doing!
+        </Feature>
+      </div>
+    </div>
+  </section>
+  <section class="mt-32 mb-32">
+    <Counters/>
+  </section>
+</DefaultLayout>

@@ -1,0 +1,20 @@
+---
+import Counter from '../components/Counter.astro'
+
+const response = await fetch('https://api.github.com/repos/crashkonijn/GOAP');
+const goapData = await response.json();
+
+var ageDifMs = Date.now() - Date.parse(goapData.created_at);
+var ageDate = new Date(ageDifMs); // miliseconds from epoch
+var years = Math.abs(ageDate.getUTCFullYear() - 1970);
+
+---
+<div class="container">
+  <h2 class="mb-16 text-6xl">Counters</h2>
+  <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
+    <Counter count={goapData.stargazers_count} title="Stars" sub="On GitHub" />
+    <Counter count={goapData.subscribers_count} title="Watching" sub="The Project" />
+    <Counter count={goapData.forks} title="Forks" sub="On GitHub" />
+    <Counter count={years} title="Years" sub="Since launch" />
+  </div>
+</div>
