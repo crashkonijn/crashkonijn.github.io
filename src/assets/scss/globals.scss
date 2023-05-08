@@ -12,3 +12,8 @@
 @use 'base/color';
 @use 'base/outline';
 @use 'base/space-content';
+
+
+.counter > p:first-child {
+    color: var(--action-color);
+}

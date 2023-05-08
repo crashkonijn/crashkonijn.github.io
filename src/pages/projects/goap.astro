@@ -3,7 +3,7 @@ import DefaultLayout from '../../layouts/DefaultLayout.astro'
 import GoapHero from '../../components/GoapHero.astro'
 import Feature from '../../components/Feature.astro'
 import ContentMedia from '../../components/ContentMedia.astro'
-import Counters from '../../components/Counters.astro'
+import Counters from '../../components/Counters.jsx'
 ---
 
 <DefaultLayout title="Home">
@@ -34,6 +34,6 @@ import Counters from '../../components/Counters.astro'
     </div>
   </section>
   <section class="mt-32 mb-32">
-    <Counters/>
+    <Counters client:load />
   </section>
 </DefaultLayout>
