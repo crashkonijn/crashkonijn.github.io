@@ -12,15 +12,18 @@ const { src = '/astro_goap_teaser.png' } = Astro.props
           <slot><span class="text-gradient">GOAP</span> Open source on GitHub!</slot>
         </h1>
         <div class="flex flex-col gap-3 min-[500px]:flex-row">
-          <a class="button has-icon" href="https://github.com/crashkonijn/GOAP">
+          <a class="button has-icon" href="https://github.com/crashkonijn/GOAP" target="_blank">
             <Icon pack="ion" name="star-outline" />
             Star on GitHub
+          </a>
+          <a class="button has-icon color-secondary" href="https://assetstore.unity.com/packages/slug/252687" target="_blank">
+            Asset Store
           </a>
           <a
             class="button has-icon color-secondary"
             href="https://goap.crashkonijn.com"
+            target="_blank"
           >
-            <Icon pack="ion" name="bookmark-outline" />
             Read the Docs
           </a>
         </div>
