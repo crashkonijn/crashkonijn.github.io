@@ -1,0 +1,46 @@
+---
+import DefaultLayout from '../../layouts/DefaultLayout.astro'
+import GoapHero from '../../components/GoapHero.astro'
+import Feature from '../../components/Feature.astro'
+import ContentMedia from '../../components/ContentMedia.astro'
+import Counters from '../../components/Counters.jsx'
+import BlackboardHero from '../../components/BlackboardHero.astro'
+---
+
+<DefaultLayout title="Home">
+  <BlackboardHero />
+  <section class="my-32">
+    <div class="container">
+      <h2 class="mb-16 text-6xl">Features</h2>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3">
+        <Feature icon="mdi:brain" title="Dynamic Blackboard System">
+          Utilize a robust data structure to share and manage AI information efficiently across various components of your game, making complex AI behaviors simple and maintainable.
+        </Feature>
+        <Feature icon="mdi:robot" title="Automated Code Generation">
+          Simplify your workflow with source generators that automatically produce typed, efficient, and error-free code based on your definitions, drastically reducing development time and potential bugs.
+        </Feature>
+        <Feature icon="mdi:signal" title="Signal-Based Data Management">
+          Each piece of data on the blackboard is managed as a 'Signal'—a lightweight class that not only holds the value but also triggers events upon changes, ensuring your AI reacts dynamically to the game environment.
+        </Feature>
+        <Feature icon="mdi:architecture" title="Event-Driven Architecture">
+          Fully leverage UnityEvents to respond to data changes, allowing for a modular and decoupled design that enhances code clarity and reusability.
+        </Feature>
+        <Feature icon="mdi:function-variant" title="Computed Signals">
+          Define signals that automatically update based on changes in dependent data, perfect for creating reactive and adaptive AI without manual updates.
+        </Feature>
+        <Feature icon="mdi:format-list-bulleted" title="List Management">
+          Manage collections of data with list signals that notify changes efficiently, perfect for handling dynamic elements like inventories or AI states.
+        </Feature>
+        <Feature icon="mdi:database" title="Serialization Support">
+          Effortlessly save and load blackboard states with built-in JSON serialization, or implement your own!
+        </Feature>
+        <Feature icon="mdi:test-tube" title="Interfaces">
+          Improve maintainability and testability of your code by using the generated interfaces instead of the concrete implementations.
+        </Feature>
+        <Feature icon="mdi:check-circle" title="Validations">
+          Make sure your values are always what you expect them to be using simple attributes!
+        </Feature>
+      </div>
+    </div>
+  </section>
+</DefaultLayout>
